@@ -501,7 +501,6 @@ class ImageComponent(FlexComponent):
                  aspect_mode=None,
                  background_color=None,
                  action=None,
-                 animated=None,
                  **kwargs):
         """__init__ method.
 
@@ -524,7 +523,6 @@ class ImageComponent(FlexComponent):
         :param str background_color: Background color of the image. Use a hexadecimal color code.
         :param action: Action performed when this image is tapped
         :type action: list[T <= :py:class:`linebot.models.actions.Action`]
-        :param bool action: True to play an animated image
         :param kwargs:
         """
         super(ImageComponent, self).__init__(**kwargs)
@@ -544,7 +542,6 @@ class ImageComponent(FlexComponent):
         self.aspect_mode = aspect_mode
         self.background_color = background_color
         self.action = get_action(action)
-        self.animated = animated
 
 
 class SeparatorComponent(FlexComponent):
